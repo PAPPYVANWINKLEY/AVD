@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#141512">
+  <meta name="description" content="천상, 악마 진영, 인간 진영의 캐릭터 설정을 모은 인물 기록.">
+  <title>인물 기록</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="wordmark" href="#top" aria-label="인물 기록 처음으로"><span class="seal" aria-hidden="true">✦</span><span>인물 기록<small>CHARACTER ARCHIVE</small></span></a>
+    <span class="edition">설정 자료 <span aria-hidden="true">/</span> 01</span>
+  </header>
+  <main id="top">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-title"><span class="eyebrow">CAST & FACTIONS</span><h1 id="page-title">인물 기록<span class="title-point">.</span></h1><p>천상 · 악마 진영 · 인간 진영</p></div>
+      <div class="intro-aside"><p>서로 다른 신념과 욕망,<br>각자의 얼굴과 관계를 기록하다.</p><dl class="totals"><div><dt>인간</dt><dd>14</dd></div><div><dt>천상</dt><dd>07</dd></div><div><dt>악마</dt><dd>29</dd></div></dl></div>
+    </section>
+    <section class="archive" aria-label="캐릭터 목록">
+      <div class="archive-controls">
+        <nav class="side-tabs" aria-label="진영 선택"><button class="side-tab active" data-side="all" aria-pressed="true">전체<span>50</span></button><button class="side-tab" data-side="human" aria-pressed="false">인간 진영<span>14</span></button><button class="side-tab" data-side="heaven" aria-pressed="false">천상<span>7</span></button><button class="side-tab" data-side="demon" aria-pressed="false">악마 진영<span>29</span></button></nav>
+        <div class="tools"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="이름, 특징, 관계 검색" aria-label="이름, 특징, 관계 검색" autocomplete="off"></label><label class="select-wrap"><span class="sr-only">소속 선택</span><select id="group-filter" aria-label="소속 선택"><option value="all">모든 소속</option></select></label></div>
+      </div>
+      <div class="results-bar"><span id="result-count" role="status" aria-live="polite">50명의 인물</span><button id="reset" type="button" hidden>필터 초기화 <span aria-hidden="true">↺</span></button><span class="hint">인물을 선택해 상세 설정을 확인하세요</span></div>
+      <div id="catalog"></div>
+      <div class="empty" id="empty" hidden><span class="empty-mark" aria-hidden="true">∅</span><h2>일치하는 인물이 없습니다</h2><p>다른 이름이나 특징으로 검색해 보세요.</p><button id="empty-reset" type="button">전체 인물 보기</button></div>
+    </section>
+  </main>
+  <footer><span>인물 기록</span><span>CHARACTER ARCHIVE</span><a href="#top">맨 위로 ↑</a></footer>
+  <dialog id="character-dialog" aria-labelledby="dialog-name"><button class="close-dialog" aria-label="상세 설정 닫기" type="button">×</button><div id="dialog-content"></div></dialog>
+</body>
+</html>
